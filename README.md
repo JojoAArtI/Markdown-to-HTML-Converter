@@ -21,9 +21,9 @@ A **stunning** and **feature-rich** client-side web application that converts Ma
 ## Demo
 
 You can see a live demo hosted on GitHub Pages here:  
-`https://your-username.github.io/your-repo-name/`
+`https://jojoaarti.github.io/Markdown-to-HTML-Converter/`
 
-*(Replace with your actual URL after deployment)*
+
 
 ---
 
@@ -69,7 +69,8 @@ Contributions are welcome! Feel free to open issues or submit pull requests for 
 
 ## Contact
 
-Created by [Your Name](https://github.com/JojoAArtI/)
+Created by Joel
+(https://github.com/JojoAArtI/)
 
 Feel free to connect or raise issues on GitHub.
 
