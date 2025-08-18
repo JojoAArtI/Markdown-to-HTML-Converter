@@ -1,37 +1,3 @@
-// ===================
-// Utility/Init Stuff
-// ===================
-const defaultMarkdown = `# Welcome to the Markdown to HTML Converter
-
-This is a **beautiful** and *functional* tool for converting Markdown to HTML.
-
-## Features
-- Real-time conversion
-- Multiple themes
-- Live preview
-- Syntax highlighting
-- Export options
-
-### Code Example
-
-\`\`\`javascript
-function convertMarkdown(text) {
-  return marked.parse(text);
-}
-\`\`\`
-
-> This converter makes working with Markdown a joy!
-
-[Learn more about Markdown](https://daringfireball.net/projects/markdown/)
-
-1. Type your Markdown
-2. See instant preview
-3. Copy or download HTML
-
----
-
-**Happy converting!**
-`;
 
 // ========== Theme Management ==============
 const themeSelect = document.getElementById('theme');
