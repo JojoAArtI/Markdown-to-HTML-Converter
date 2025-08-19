@@ -26,13 +26,6 @@ Start typing **Markdown** here and see the _real-time_ HTML preview and code upd
 - Elegant themes and preview styles
 - Responsive design & keyboard shortcuts
 
-## Example Code
-
-\`\`\`javascript
-function helloWorld() {
-  console.log("Hello, world!");
-}
-\`\`\`
 
 > This smooth conversion experience makes writing joyful!
 
@@ -44,7 +37,7 @@ function helloWorld() {
 
 ---
 
-Happy converting! 🚀`;
+
 
 // === Initialize theme ===
 function applyTheme(name) {
