@@ -2,66 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Markdown to HTML Converter</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stunning Markdown to HTML Converter</title>
+
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <!-- CodeMirror CSS for syntax highlighting -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/codemirror.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/theme/material-darker.min.css">
-  <!-- highlight.js CSS for HTML code panel -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+
+  <!-- CodeMirror CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/codemirror.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/theme/dracula.min.css" />
+
+  <!-- Highlight.js CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/night-owl.min.css" />
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
+
 </head>
 <body>
   <header>
-    <h1><span class="icon">📝</span> Markdown to HTML Converter</h1>
-    <div class="theme-switcher">
-      <label for="theme">Theme:</label>
-      <select id="theme">
+    <h1>Markdown to HTML Converter</h1>
+    <div class="controls">
+      <label for="themeSelector">Theme:</label>
+      <select id="themeSelector" aria-label="Select Theme">
         <option value="light">Light</option>
-        <option value="dark">Dark</option>
+        <option value="dark" selected>Dark</option>
         <option value="vibrant">Vibrant</option>
       </select>
-      <label for="preview-style">Preview Style:</label>
-      <select id="preview-style">
-        <option value="default">Default</option>
+
+      <label for="styleSelector">Preview Style:</label>
+      <select id="styleSelector" aria-label="Select Preview Style">
+        <option value="default" selected>Default</option>
         <option value="article">Article</option>
         <option value="technical">Technical</option>
         <option value="elegant">Elegant</option>
       </select>
+
+      <button id="copyHtml" title="Copy HTML (Ctrl/Cmd + K)">Copy HTML</button>
+      <button id="downloadHtml" title="Download HTML (Ctrl/Cmd + D)">Download</button>
+      <button id="resetAll" title="Clear All (Ctrl/Cmd + R)">Clear</button>
     </div>
   </header>
+
   <main>
-    <section class="panel input-panel">
-      <div class="panel-header">
-        <span>Markdown Input</span>
-        <button id="clear-btn" title="Reset (Ctrl+R)">🧹</button>
-      </div>
-      <textarea id="markdown-editor"></textarea>
-      <div class="shortcut-hint">Shortcuts: Ctrl+K (Copy) &middot; Ctrl+D (Download) &middot; Ctrl+R (Reset)</div>
-    </section>
-    <section class="panel output-panel">
-      <div class="tabs">
-        <button class="tab-btn active" data-tab="preview">Preview</button>
-        <button class="tab-btn" data-tab="html">HTML Code</button>
-      </div>
-      <div class="tab-content" id="preview-tab"></div>
-      <pre class="tab-content" id="html-tab" style="display:none;"></pre>
-      <div class="output-actions">
-        <button id="copy-btn" title="Copy HTML (Ctrl+K)">Copy HTML</button>
-        <button id="download-btn" title="Download HTML (Ctrl+D)">Download</button>
-      </div>
-      <div id="copy-feedback" class="feedback"></div>
-    </section>
+    <div id="container">
+      <section class="panel" id="editorPanel" aria-label="Markdown editor">
+        <div class="panel-header">Markdown Input</div>
+        <textarea id="markdownInput" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"></textarea>
+      </section>
+
+      <div id="resizer" role="separator" aria-orientation="vertical" aria-label="Resize Panels" tabindex="0"></div>
+
+      <section class="panel output" aria-label="HTML Output">
+        <div class="output-tabs" role="tablist">
+          <button role="tab" aria-selected="true" aria-controls="htmlPreview" id="tabPreview" class="active tab-btn">Preview</button>
+          <button role="tab" aria-selected="false" aria-controls="htmlCode" id="tabCode" class="tab-btn">HTML Code</button>
+        </div>
+        <div id="htmlPreview" role="tabpanel" aria-labelledby="tabPreview" aria-live="polite" class="tab-content active preview-panel"></div>
+        <pre id="htmlCode" role="tabpanel" aria-labelledby="tabCode" class="tab-content code-panel" tabindex="0"><code class="html"></code></pre>
+      </section>
+    </div>
   </main>
+
+  <div id="toast" role="alert" aria-live="assertive"></div>
+
   <!-- Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/codemirror.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.15/mode/markdown/markdown.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  <!-- App logic -->
+
+  <!-- Custom Script -->
   <script src="script.js"></script>
 </body>
 </html>
