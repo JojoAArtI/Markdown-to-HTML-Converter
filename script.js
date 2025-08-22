@@ -1,3 +1,4 @@
+```javascript
 // script.js
 
 // === Globals ===
@@ -27,17 +28,14 @@ Start typing **Markdown** here and see the _real-time_ HTML preview and code upd
 - Responsive design & keyboard shortcuts
 
 
-> This smooth conversion experience makes writing joyful!
-
-[Learn Markdown](https://www.markdownguide.org)
-
+> Steps
 1. Type your Markdown
 2. View live preview & code side-by-side
 3. Copy or download your HTML output
 
 ---
 
-
+Happy converting! 🚀`;
 
 // === Initialize theme ===
 function applyTheme(name) {
@@ -326,3 +324,4 @@ window.addEventListener('DOMContentLoaded', () => {
   markdownInput.value = defaultMarkdown;
   renderMarkdown();
 });
+```
