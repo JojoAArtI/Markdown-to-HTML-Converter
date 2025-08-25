@@ -26,8 +26,10 @@ Start typing **Markdown** here and see the _real-time_ HTML preview and code upd
 - Elegant themes and preview styles
 - Responsive design & keyboard shortcuts
 
+> This smooth conversion experience makes writing joyful!
 
-> Steps
+[Learn Markdown](https://www.markdownguide.org)
+
 1. Type your Markdown
 2. View live preview & code side-by-side
 3. Copy or download your HTML output
@@ -323,4 +325,3 @@ window.addEventListener('DOMContentLoaded', () => {
   markdownInput.value = defaultMarkdown;
   renderMarkdown();
 });
-```
