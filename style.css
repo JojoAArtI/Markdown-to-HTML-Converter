@@ -1,4 +1,6 @@
+/* style.css */
 
+/* Reset and base */
 *,
 *::before,
 *::after {
@@ -415,4 +417,3 @@ main {
     opacity: 0.5;
   }
 }
-```
