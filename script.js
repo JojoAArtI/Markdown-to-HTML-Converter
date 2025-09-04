@@ -325,3 +325,4 @@ window.addEventListener('DOMContentLoaded', () => {
   markdownInput.value = defaultMarkdown;
   renderMarkdown();
 });
+
