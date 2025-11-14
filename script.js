@@ -1,4 +1,4 @@
-// script.js
+// script.js 
 
 // === Globals ===
 const markdownInput = document.getElementById('markdownInput');
