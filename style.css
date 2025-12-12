@@ -1,21 +1,3 @@
-/* style.css */
-
-/* Reset and base */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body, html {
-  margin: 0;
-  padding: 0; 
-  height: 100%;
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--bg);
-  color: var(--fg);
-  transition: background-color 0.35s ease, color 0.35s ease;
-}
 
 :root {
   --bg: #1e1e2f;
@@ -65,7 +47,22 @@ body.vibrant {
   --shadow-color: rgba(246, 37, 133, 0.4);
 }
 
-/* Layout */
+body, html {
+  margin: 0;
+  padding: 0; 
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
 
 header {
   padding: 1rem 1.5rem;
