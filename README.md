@@ -9,8 +9,6 @@ You can see a live demo hosted on GitHub Pages here:
 `https://jojoaarti.github.io/Markdown-to-HTML-Converter/`
 
 
-
-
 ---
 
 ## Keyboard Shortcuts
