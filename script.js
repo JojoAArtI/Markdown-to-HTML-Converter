@@ -1,22 +1,5 @@
-// script.js 
 
-// === Globals ===
-const markdownInput = document.getElementById('markdownInput');
-const htmlPreview = document.getElementById('htmlPreview');
-const htmlCode = document.querySelector('#htmlCode code');
-const tabPreviewBtn = document.getElementById('tabPreview');
-const tabCodeBtn = document.getElementById('tabCode');
-const themeSelector = document.getElementById('themeSelector');
-const styleSelector = document.getElementById('styleSelector');
-const copyBtn = document.getElementById('copyHtml');
-const downloadBtn = document.getElementById('downloadHtml');
-const resetBtn = document.getElementById('resetAll');
-const toast = document.getElementById('toast');
-const resizer = document.getElementById('resizer');
-const editorPanel = document.getElementById('editorPanel');
-const outputPanel = document.querySelector('.output');
 
-// Default markdown sample
 const defaultMarkdown = `# Welcome to the Stunning Markdown to HTML Converter
 
 Start typing **Markdown** here and see the _real-time_ HTML preview and code update instantly!
@@ -50,7 +33,21 @@ function loadTheme() {
   themeSelector.value = savedTheme;
 }
 
-// === Preview styles (inject CSS) ===
+
+const markdownInput = document.getElementById('markdownInput');
+const htmlPreview = document.getElementById('htmlPreview');
+const htmlCode = document.querySelector('#htmlCode code');
+const tabPreviewBtn = document.getElementById('tabPreview');
+const tabCodeBtn = document.getElementById('tabCode');
+const themeSelector = document.getElementById('themeSelector');
+const styleSelector = document.getElementById('styleSelector');
+const copyBtn = document.getElementById('copyHtml');
+const downloadBtn = document.getElementById('downloadHtml');
+const resetBtn = document.getElementById('resetAll');
+const toast = document.getElementById('toast');
+const resizer = document.getElementById('resizer');
+const editorPanel = document.getElementById('editorPanel');
+const outputPanel = document.querySelector('.output');
 const previewStyles = {
   default: `
   .md-preview-style {
